@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube – Tech reviews before you buy · Mohammad Alfarras</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <meta name="description" content="YouTube channel of Mohammad Alfarras: honest tech reviews and real-life tests before you buy – setup, daily use, pros, cons and clear, simple conclusions.">
+  <meta name="keywords" content="Mohammad Alfarras, moalfarras, moalfarras youtube, tech reviews, before you buy, product test, gadgets, smart devices">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+
+    .yt-shell { margin-top: 1.8rem; }
+
+    .yt-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+    @media (max-width: 960px) {
+      .yt-hero-grid { grid-template-columns: 1fr; }
+    }
+
+    .yt-hero-main,
+    .yt-main-player,
+    .yt-side,
+    .yt-video-card {
+      background: rgba(255,255,255,0.18);
+      border-radius: 22px;
+      border: 1px solid rgba(248, 113, 113, 0.85);
+      box-shadow: 0 22px 48px rgba(15,23,42,0.55);
+      backdrop-filter: blur(22px);
+    }
+    body.dark-mode .yt-hero-main,
+    body.dark-mode .yt-main-player,
+    body.dark-mode .yt-side,
+    body.dark-mode .yt-video-card {
+      background: rgba(15,23,42,0.9);
+      border-color: rgba(248,113,113,0.9);
+      box-shadow: 0 26px 60px rgba(0,0,0,0.9);
+    }
+
+    .yt-hero-main {
+      position: relative;
+      padding: 1rem 1.1rem;
+      overflow: hidden;
+    }
+    .yt-hero-main::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(248,113,113,0.35), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(239,68,68,0.25), transparent 65%);
+      mix-blend-mode: soft-light;
+      opacity: .85;
+      pointer-events: none;
+    }
+
+    .yt-hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr);
+      gap: 1rem;
+    }
+    @media (max-width: 780px) {
+      .yt-hero-inner { grid-template-columns: 1fr; }
+    }
+
+    .yt-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .3rem .8rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      background: rgba(15,23,42,0.96);
+      color: #fee2e2;
+      box-shadow: 0 12px 30px rgba(15,23,42,0.75);
+      margin-bottom: .6rem;
+    }
+    .yt-badge span.icon { font-size: 1rem; }
+
+    .yt-title {
+      font-size: 1.55rem;
+      margin: 0 0 .35rem;
+    }
+    .yt-subtitle {
+      font-size: .9rem;
+      line-height: 2.1;
+      color: var(--text-soft);
+      margin-bottom: .7rem;
+    }
+
+    .yt-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      font-size: .78rem;
+      margin-top: .35rem;
+    }
+    .yt-tag {
+      padding: .2rem .7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(248, 113, 113, 0.7);
+      background: rgba(254,242,242,0.9);
+      color: #7f1d1d;
+    }
+    body.dark-mode .yt-tag {
+      background: rgba(15,23,42,0.96);
+      color: #fecaca;
+    }
+
+    .yt-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      margin-top: .9rem;
+      padding: .55rem 1.2rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg,#ef4444,#f97316);
+      color: #fff;
+      font-size: .85rem;
+      text-decoration: none;
+      box-shadow: 0 18px 40px rgba(248,113,113,0.65);
+    }
+    .yt-btn span { font-size: 1.05rem; }
+
+    .yt-info-list {
+      margin-top: .8rem;
+      font-size: .8rem;
+      color: var(--text-soft);
+      display: grid;
+      gap: .25rem;
+    }
+    .yt-info-item {
+      display: flex;
+      gap: .4rem;
+      align-items: flex-start;
+    }
+    .yt-info-item span.icon {
+      font-size: .9rem;
+      margin-top: .05rem;
+    }
+
+    .yt-side {
+      padding: .9rem .95rem;
+    }
+    .yt-side-title {
+      margin: 0 0 .4rem;
+      font-size: .95rem;
+    }
+    .yt-side-desc {
+      margin: 0 0 .6rem;
+      font-size: .8rem;
+      color: var(--text-soft);
+    }
+    .yt-side-list {
+      display: grid;
+      gap: .45rem;
+      font-size: .78rem;
+    }
+    .yt-side-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .3rem .7rem;
+      border-radius: 999px;
+      background: rgba(254,242,242,0.95);
+      border: 1px solid rgba(248,113,113,0.6);
+      color: #7f1d1d;
+    }
+    body.dark-mode .yt-side-pill {
+      background: rgba(15,23,42,0.92);
+      color: #fecaca;
+    }
+
+    .yt-main-player {
+      margin-top: 2rem;
+      padding: .9rem .95rem 1.1rem;
+    }
+    .yt-main-player h2 {
+      margin: 0 0 .6rem;
+      font-size: 1rem;
+    }
+    .yt-main-player p {
+      margin: 0 0 .8rem;
+      font-size: .8rem;
+      color: var(--text-soft);
+    }
+    .yt-main-frame {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 26px 60px rgba(15,23,42,0.7);
+    }
+    .yt-main-frame::after {
+      content: "▶";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: rgba(255,255,255,0.2);
+      text-shadow: 0 18px 40px rgba(0,0,0,0.85);
+      pointer-events: none;
+    }
+    .yt-main-frame iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      display: block;
+    }
+
+    .yt-videos {
+      margin-top: 2.1rem;
+    }
+    .yt-videos-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: .6rem;
+    }
+    .yt-videos-header h2 {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .yt-videos-header p {
+      margin: 0;
+      font-size: .8rem;
+      color: var(--text-soft);
+    }
+
+    .yt-video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .yt-video-card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .yt-thumb {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+    .yt-thumb iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .yt-thumb::after {
+      content: "▶";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: rgba(255,255,255,0.9);
+      text-shadow: 0 12px 30px rgba(0,0,0,0.9);
+      opacity: 0;
+      transition: opacity .25s ease;
+      pointer-events: none;
+    }
+
+    .yt-video-
+    .yt-video-body h3 {
+      margin: 0 0 .25rem;
+      font-size: .9rem;
+    }
+    .yt-video-body p {
+      margin: 0;
+      line-height: 1.9;
+      color: var(--text-soft);
+    }
+
+    .yt-video-meta {
+      margin-top: .5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      font-size: .75rem;
+    }
+    .yt-video-meta span {
+      padding: .18rem .55rem;
+      border-radius: 999px;
+      background: rgba(248,250,252,0.96);
+      border: 1px solid rgba(226,232,240,0.9);
+    }
+    body.dark-mode .yt-video-meta span {
+      background: rgba(15,23,42,0.96);
+      border-color: rgba(30,64,175,0.8);
+    }
+
+    .yt-video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 50px rgba(15,23,42,0.8);
+      border-color: rgba(248,113,113,0.9);
+    }
+    .yt-video-card:hover .yt-thumb::after {
+      opacity: 1;
+    }
+
+    .yt-footer-note {
+      margin-top: 1.6rem;
+      font-size: .8rem;
+      color: var(--text-soft);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="glass-shell">
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="brand">
+          <img src="../img/logo.jpg" alt="">
+          <div class="brand-text">
+            <strong>Mohammad Alfarras</strong>
+            <span>moalfarras.space</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About / CV</a>
+          <a href="blog.html">Ads & Blog</a>
+          <a href="iptv.html">IPTV</a>
+          <a href="youtube.html" class="active">YouTube</a>
+          <a href="contact.html">Contact</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+
+        <div>
+          <a class="lang-switch" href="../youtube.html">AR</a>
+          <button id="themeToggle" class="theme-toggle">☀ / 🌙</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container yt-shell">
+
+      <section class="section">
+        <div class="yt-hero-grid">
+
+          <div class="yt-hero-main">
+            <div class="yt-hero-inner">
+              <div>
+                <div class="yt-badge">
+                  <span class="icon">▶</span>
+                  <span>Honest tech reviews before you buy</span>
+                </div>
+                <h1 class="yt-title">YouTube channel – real usage before you spend</h1>
+                <p class="yt-subtitle">
+                  On my channel I explain tech products in simple language from real-life use:
+                  how to set them up, what they feel like day-to-day, which small problems appear
+                  after a while, and when I recommend buying – or not.
+                </p>
+
+                <div class="yt-tags">
+                  <span class="yt-tag">Before you buy</span>
+                  <span class="yt-tag">Real usage tests</span>
+                  <span class="yt-tag">Pros and cons</span>
+                  <span class="yt-tag">Honest opinion</span>
+                </div>
+
+                <a class="yt-btn" href="https://youtube.com/" target="_blank" rel="noopener">
+                  <span>▶</span>
+                  <span>Visit the YouTube channel</span>
+                </a>
+              </div>
+
+              <div>
+                <div class="yt-info-list">
+                  <div class="yt-info-item">
+                    <span class="icon">📦</span>
+                    <span>Unboxing and a clear look at what you really get – not just marketing photos.</span>
+                  </div>
+                  <div class="yt-info-item">
+                    <span class="icon">🛠</span>
+                    <span>Step-by-step setup or installation so you don’t waste time alone.</span>
+                  </div>
+                  <div class="yt-info-item">
+                    <span class="icon">⏳</span>
+                    <span>Focus on what changes after weeks of real use – not just first impressions.</span>
+                  </div>
+                  <div class="yt-info-item">
+                    <span class="icon">✅</span>
+                    <span>Clear conclusion: who this product is for, and who should skip it.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="yt-side">
+            <h2 class="yt-side-title">How I like to explain</h2>
+            <p class="yt-side-desc">
+              I try to talk like a friend would: no complex terms, no hidden ads, just daily-life experience.
+            </p>
+            <div class="yt-side-list">
+              <div class="yt-side-pill">Products I personally use at home or at work.</div>
+              <div class="yt-side-pill">Small details and issues you don’t see in classic ads.</div>
+              <div class="yt-side-pill">Compact videos with as little fluff as possible.</div>
+              <div class="yt-side-pill">Sometimes affiliate links – always clearly mentioned.</div>
+            </div>
+          </aside>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="yt-main-player">
+          <h2>Main video to see my style</h2>
+          <p>
+            This video gives you a good idea of how I explain things – from first impression to real usage.
+          </p>
+          <div class="yt-main-frame">
+            <iframe src="https://www.youtube.com/embed/McHuaqgwdG4" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="section yt-videos">
+        <div class="yt-videos-header">
+          <h2>Selected videos from the channel</h2>
+          <p>A few examples of how I talk about products before recommending them.</p>
+        </div>
+
+        <div class="yt-video-grid">
+
+          <article class="yt-video-card">
+            <div class="yt-thumb">
+              <iframe src="https://www.youtube.com/embed/WpA8SwfA8h8" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="yt-video-body">
+              <h3>Product review with real pros & cons</h3>
+              <p>I talk honestly about what works well and what might annoy you later.</p>
+              <div class="yt-video-meta">
+                <span>Pros & cons</span>
+                <span>Honest review</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="yt-video-card">
+            <div class="yt-thumb">
+              <iframe src="https://www.youtube.com/embed/kLOeaQJPvcM" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="yt-video-body">
+              <h3>Drone under 50 € – fun or headache?</h3>
+              <p>Is this type of drone practical, or more like a short-lived toy?</p>
+              <div class="yt-video-meta">
+                <span>Budget drone</span>
+                <span>Who is it for?</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="yt-video-card">
+            <div class="yt-thumb">
+              <iframe src="https://www.youtube.com/embed/u5h4lBzIwUw" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="yt-video-body">
+              <h3>Everyday product test</h3>
+              <p>Focus on long-term comfort: does it stay useful, or only look good on day one?</p>
+              <div class="yt-video-meta">
+                <span>Daily use</span>
+                <span>Long-term comfort</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="yt-footer-note">
+          For more videos, you can visit the channel on YouTube and subscribe to stay updated.
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> moalfarras.space – All rights reserved.
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

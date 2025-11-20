@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mohammad Alfarras – Life, Work, YouTube, IPTV · moalfarras.space</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <meta name="description" content="Official website of Mohammad Alfarras: life and work between Syria and Germany, a YouTube channel with honest tech reviews before you buy, legal IPTV service, and a simple blog about work and life in Europe.">
+  <meta name="keywords" content="Mohammad Alfarras, moalfarras, CV, Berlin, Hassakeh, tech reviews, YouTube, IPTV, tech products, migrant experience, work in Europe">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Inter font (clean tech-style font similar to Intel style) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Page-specific styling: animated background + glass cards -->
+  <style>
+    /* ===== Base + Font override for this page ===== */
+    
+    
+
+    /* ===== Animated background – EN version (different style than AR) ===== */
+    .home-bg-layer {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
+      pointer-events: none;
+      background: radial-gradient(circle at 10% 0%, #dbeafe 0, #e0f2fe 25%, #e5f0ff 60%);
+    }
+    body.dark-mode .home-bg-layer {
+      background: radial-gradient(circle at 12% 0%, #020617 0, #020617 40%, #020617 80%);
+    }
+
+    /* Soft flowing ribbons (different motion from AR) */
+    .home-bg-ribbons {
+      position: absolute;
+      inset: -40%;
+      background:
+        conic-gradient(from 210deg, rgba(59,130,246,0.22), transparent 40%, rgba(56,189,248,0.28), transparent 75%),
+        conic-gradient(from 40deg, rgba(37,99,235,0.22), transparent 45%, rgba(6,182,212,0.30), transparent 80%);
+      mix-blend-mode: screen;
+      opacity: 0.9;
+      animation: ribbonsDrift 18s ease-in-out infinite alternate;
+    }
+    body.dark-mode .home-bg-ribbons {
+      opacity: 1;
+      mix-blend-mode: lighten;
+    }
+
+    /* Subtle grid glow */
+    .home-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(148,163,184,0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148,163,184,0.2) 1px, transparent 1px);
+      background-size: 120px 120px;
+      opacity: 0.25;
+      mix-blend-mode: soft-light;
+      animation: gridPan 28s linear infinite;
+    }
+    body.dark-mode .home-bg-grid {
+      opacity: 0.35;
+    }
+
+    /* Orbit glow */
+    .home-bg-orbit {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle, rgba(59,130,246,0.55), transparent 60%);
+      top: 68%;
+      left: 8%;
+      filter: blur(4px);
+      opacity: 0.85;
+      animation: orbitMove 16s ease-in-out infinite alternate;
+    }
+    body.dark-mode .home-bg-orbit {
+      background: radial-gradient(circle, rgba(56,189,248,0.85), transparent 60%);
+    }
+
+    /* Stars layer – more visible in dark mode */
+    .home-bg-stars {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1px),
+        radial-gradient(circle, rgba(191,219,254,0.7) 1px, transparent 1px),
+        radial-gradient(circle, rgba(56,189,248,0.7) 1px, transparent 1px);
+      background-size: 180px 180px, 260px 260px, 340px 340px;
+      background-position: 0 0, 60px 80px, 120px 40px;
+      opacity: 0.18;
+      mix-blend-mode: screen;
+      animation: starsDrift 40s linear infinite;
+    }
+    body.dark-mode .home-bg-stars {
+      opacity: 0.65;
+    }
+
+    @keyframes ribbonsDrift {
+      0%   { transform: translate3d(-6%, 4%, 0) scale(1.03) rotate(1deg); }
+      50%  { transform: translate3d(4%, -3%, 0) scale(1.06) rotate(-1deg); }
+      100% { transform: translate3d(-4%, -5%, 0) scale(1.08) rotate(0deg); }
+    }
+    @keyframes gridPan {
+      0%   { background-position: 0 0, 0 0; }
+      100% { background-position: 160px 220px, 120px 180px; }
+    }
+    @keyframes orbitMove {
+      0%   { transform: translate3d(0,0,0) scale(1); }
+      100% { transform: translate3d(40px,-30px,0) scale(1.15); }
+    }
+    @keyframes starsDrift {
+      0%   { background-position: 0 0, 60px 80px, 120px 40px; }
+      100% { background-position: -140px -120px, -80px -60px, -40px -30px; }
+    }
+
+    /* ===== Generic animations for content ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes cardPop {
+      from { opacity: 0; transform: translateY(16px) scale(.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .animate-block {
+      opacity: 0;
+      animation: fadeUp .7s ease forwards;
+    }
+    .animate-block.delay-1 { animation-delay: .15s; }
+    .animate-block.delay-2 { animation-delay: .3s; }
+    .animate-block.delay-3 { animation-delay: .45s; }
+    .animate-block.delay-4 { animation-delay: .6s; }
+
+    .animate-card {
+      opacity: 0;
+      animation: cardPop .78s ease forwards;
+    }
+    .animate-card.delay-1 { animation-delay: .2s; }
+    .animate-card.delay-2 { animation-delay: .35s; }
+    .animate-card.delay-3 { animation-delay: .5s; }
+
+    /* ===== Hero section ===== */
+    .hero {
+      margin-top: 1.8rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 1.6rem;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .35rem .9rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(59,130,246,0.75);
+      color: #1e293b;
+      margin-bottom: .8rem;
+      box-shadow: 0 10px 25px rgba(148,163,184,0.4);
+      backdrop-filter: blur(14px);
+    }
+    body.dark-mode .hero-badge {
+      background: rgba(15,23,42,0.96);
+      color: #e5e7eb;
+      border-color: rgba(56,189,248,0.9);
+    }
+    .hero-badge span.icon {
+      font-size: .95rem;
+    }
+
+    .hero-title {
+      font-size: 1.9rem;
+      margin-bottom: .25rem;
+      color: #0f172a;
+    }
+    body.dark-mode .hero-title {
+      color: #e5e7eb;
+    }
+
+    .hero-subtitle {
+      font-size: .95rem;
+      line-height: 2;
+      color: #1f2937;
+      max-width: 36rem;
+    }
+    body.dark-mode .hero-subtitle {
+      color: #e5e7eb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 1.1rem;
+    }
+    .btn-main,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .55rem 1.1rem;
+      border-radius: 999px;
+      font-size: .86rem;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-main {
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: #f9fafb;
+      font-weight: 600;
+      box-shadow: 0 16px 34px rgba(37,99,235,0.55);
+    }
+    .btn-ghost {
+      border: 1px solid rgba(148,163,184,0.9);
+      color: #0f172a;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(14px);
+    }
+    body.dark-mode .btn-ghost {
+      background: rgba(15,23,42,0.96);
+      color: #e5e7eb;
+    }
+    .btn-main span.icon,
+    .btn-ghost span.icon {
+      font-size: 1rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
+      margin-top: 1.1rem;
+      font-size: .8rem;
+      color: #4b5563;
+    }
+    body.dark-mode .hero-meta {
+      color: #cbd5f5;
+    }
+    .hero-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+    }
+
+    /* Side card with picture – more transparent glass */
+    .hero-card {
+      background: rgba(255,255,255,0.18);
+      border-radius: 22px;
+      padding: 1rem;
+      border: 1px solid rgba(148,163,184,0.6);
+      box-shadow: 0 22px 45px rgba(15,23,42,0.22);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(24px);
+    }
+    body.dark-mode .hero-card {
+      background: rgba(15,23,42,0.82);
+      border-color: rgba(148,163,184,0.7);
+      box-shadow: 0 22px 50px rgba(0,0,0,0.9);
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0% 0%, rgba(59,130,246,0.28), transparent 55%);
+      mix-blend-mode: soft-light;
+      opacity: .9;
+      animation: heroGlow 13s ease-in-out infinite alternate;
+    }
+    @keyframes heroGlow {
+      0% { transform: translate3d(0,0,0); opacity:.8; }
+      100% { transform: translate3d(10px,20px,0); opacity:1; }
+    }
+
+    .hero-card-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: .9rem;
+      align-items: center;
+    }
+    @media (max-width: 520px) {
+      .hero-card-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-avatar-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .hero-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 32px;
+      padding: 3px;
+      background: radial-gradient(circle at 0% 0%, #3b82f6, #06b6d4);
+      box-shadow: 0 18px 38px rgba(15,23,42,0.55);
+    }
+    .hero-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 28px;
+      object-fit: cover;
+    }
+
+    .hero-card-name {
+      font-size: 1.05rem;
+      margin-bottom: .2rem;
+      color: #0f172a;
+    }
+    body.dark-mode .hero-card-name {
+      color: #e5e7eb;
+    }
+    .hero-card-role {
+      font-size: .83rem;
+      opacity: .85;
+      margin-bottom: .35rem;
+      color: #4b5563;
+    }
+    body.dark-mode .hero-card-role {
+      color: #cbd5f5;
+    }
+    .hero-card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      font-size: .78rem;
+    }
+    .hero-chip {
+      padding: .18rem .6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.9);
+      background: rgba(248,250,252,0.92);
+      color: #0f172a;
+      text-decoration: none;
+      backdrop-filter: blur(14px);
+    }
+    body.dark-mode .hero-chip {
+      background: rgba(15,23,42,0.96);
+      color: #e5e7eb;
+    }
+
+    /* ===== Section cards – more transparent glass ===== */
+    .section-title {
+      margin-top: 2.2rem;
+      margin-bottom: .3rem;
+    }
+    .section-subtitle {
+      font-size: .86rem;
+      color: #4b5563;
+      max-width: 42rem;
+    }
+    body.dark-mode .section-subtitle {
+      color: #cbd5f5;
+    }
+
+    .sections-grid {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+    }
+    .section-card {
+      background: rgba(255,255,255,0.7);
+      border-radius: 18px;
+      border: 1px solid rgba(209,213,219,0.85);
+      box-shadow: 0 14px 32px rgba(148,163,184,0.25);
+      padding: .9rem .95rem;
+      transition: .18s ease;
+      backdrop-filter: blur(18px);
+    }
+    body.dark-mode .section-card {
+      background: rgba(15,23,42,0.84);
+      border-color: rgba(148,163,184,0.8);
+      box-shadow: 0 14px 32px rgba(15,23,42,0.85);
+    }
+    .section-card h3 {
+      font-size: .95rem;
+      margin-top: 0;
+      margin-bottom: .2rem;
+      color: #0f172a;
+    }
+    body.dark-mode .section-card h3 {
+      color: #e5e7eb;
+    }
+    .section-card p {
+      font-size: .8rem;
+      line-height: 1.9;
+      color: #4b5563;
+      margin-bottom: .45rem;
+    }
+    body.dark-mode .section-card p {
+      color: var(--text-soft);
+    }
+    .section-card a {
+      font-size: .78rem;
+      text-decoration: none;
+      color: #2563eb;
+    }
+    .section-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(148,163,184,0.55);
+      border-color: rgba(37,99,235,0.9);
+    }
+    body.dark-mode .section-card:hover {
+      box-shadow: 0 20px 45px rgba(15,23,42,0.9);
+      border-color: rgba(56,189,248,0.9);
+    }
+
+    /* ===== Services strip ===== */
+    .services-strip {
+      margin-top: 2.4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: .7rem;
+      font-size: .8rem;
+    }
+    .services-item {
+      background: rgba(255,255,255,0.8);
+      border-radius: 999px;
+      padding: .45rem .8rem;
+      border: 1px solid rgba(209,213,219,0.85);
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      color: #111827;
+      box-shadow: 0 10px 24px rgba(148,163,184,0.3);
+      backdrop-filter: blur(18px);
+    }
+    body.dark-mode .services-item {
+      background: rgba(15,23,42,0.86);
+      border-color: rgba(148,163,184,0.75);
+      color: #e5e7eb;
+      box-shadow: 0 12px 28px rgba(15,23,42,0.9);
+    }
+
+    /* ===== YouTube + IPTV blocks ===== */
+    .home-rows {
+      margin-top: 2.6rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr);
+      gap: 1.4rem;
+    }
+    @media (max-width: 960px) {
+      .home-rows { grid-template-columns: 1fr; }
+    }
+
+    .home-block {
+      background: rgba(255,255,255,0.74);
+      border-radius: 20px;
+      border: 1px solid rgba(209,213,219,0.9);
+      box-shadow: 0 16px 36px rgba(148,163,184,0.35);
+      padding: 1rem;
+      backdrop-filter: blur(20px);
+    }
+    body.dark-mode .home-block {
+      background: rgba(15,23,42,0.86);
+      border-color: rgba(148,163,184,0.8);
+      box-shadow: 0 16px 36px rgba(15,23,42,0.9);
+    }
+    .home-block h2 {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: .4rem;
+      color: #0f172a;
+    }
+    body.dark-mode .home-block h2 {
+      color: #e5e7eb;
+    }
+    .home-block p {
+      font-size: .82rem;
+      line-height: 1.9;
+      color: #4b5563;
+      margin-bottom: .6rem;
+    }
+    body.dark-mode .home-block p {
+      color: var(--text-soft);
+    }
+    .home-block-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      font-size: .8rem;
+    }
+    .home-link {
+      text-decoration: none;
+      color: #2563eb;
+    }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      margin-top: .5rem;
+    }
+    .tag-pill {
+      font-size: .75rem;
+      padding: .12rem .55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.8);
+      color: #1e293b;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(14px);
+    }
+    body.dark-mode .tag-pill {
+      color: #cbd5f5;
+      background: rgba(15,23,42,0.96);
+    }
+
+    /* ===== Final CTA ===== */
+    .home-cta {
+      margin-top: 2.4rem;
+      margin-bottom: .4rem;
+      text-align: center;
+      font-size: .85rem;
+      color: #4b5563;
+    }
+    body.dark-mode .home-cta {
+      color: var(--text-soft);
+    }
+    .home-cta a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .hero-title { font-size: 1.6rem; }
+      .hero-subtitle { font-size: .9rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Animated background (different style + stars in dark mode) -->
+  <div class="glass-shell">
+
+    <!-- HEADER -->
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="brand">
+          <img src="../img/logo.jpg" alt="">
+          <div class="brand-text">
+            <strong>Mohammad Alfarras</strong>
+            <span>moalfarras.space</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About / CV</a>
+          <a href="blog.html">Ads & Blog</a>
+          <a href="iptv.html">IPTV</a>
+          <a href="youtube.html">YouTube</a>
+          <a href="contact.html">Contact</a>
+          <a href="feedback.html">Feedback</a>
+        </nav>
+
+        <div>
+          <a class="lang-switch" href="../index.html">AR</a>
+          <button id="themeToggle" class="theme-toggle">☀ / 🌙</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="container">
+
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="hero-grid">
+
+          <!-- Text side -->
+          <div class="animate-block">
+            <div class="hero-badge">
+              <span class="icon">📍</span>
+              From Al-Hasakah in Syria to Berlin in Germany – real life, work and tech content
+            </div>
+
+            <h1 class="hero-title">Mohammad Alfarras – sharing the real experience, not a glossy ad</h1>
+
+            <p class="hero-subtitle">
+              This website collects what I’m working on right now:
+              my story and CV between Syria and Germany, a YouTube channel with honest tech reviews
+              before you buy, a legal IPTV service for people who like to watch comfortably,
+              and a small blog about work and life in Europe – with an open space for your feedback
+              and direct contact.
+            </p>
+
+            <div class="hero-actions">
+              <a href="youtube.html" class="btn-main">
+                <span class="icon">▶</span>
+                Go to YouTube page
+              </a>
+              <a href="about.html" class="btn-ghost">
+                <span class="icon">📄</span>
+                Learn more about my journey
+              </a>
+            </div>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <span>🎥</span>
+                <span>Honest tech reviews and real-life product tests</span>
+              </div>
+              <div class="hero-meta-item">
+                <span>🌍</span>
+                <span>Life and work between Syria and Germany</span>
+              </div>
+              <div class="hero-meta-item">
+                <span>📺</span>
+                <span>Legal IPTV with support and follow-up</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side glass card with photo + social links -->
+          <aside class="hero-card animate-card delay-1">
+            <div class="hero-card-inner">
+              <div class="hero-avatar-wrap">
+                <div class="hero-avatar">
+                  <!-- Use your photo here as ../img/profile.jpg -->
+                  <img src="../img/profile.jpg" alt="Photo of Mohammad Alfarras">
+                </div>
+              </div>
+              <div>
+                <div class="hero-card-name">Mohammad Alfarras</div>
+                <div class="hero-card-role">Logistics & home-delivery planning · Tech content creator</div>
+                <div class="hero-card-links">
+                  <a class="hero-chip" href="https://youtube.com/" target="_blank">YouTube</a>
+                  <a class="hero-chip" href="https://t.me/moalfarras" target="_blank">Telegram</a>
+                  <a class="hero-chip" href="https://instagram.com/moalfarras" target="_blank">Instagram</a>
+                  <a class="hero-chip" href="https://facebook.com/moalfarras" target="_blank">Facebook</a>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </section>
+
+      <!-- MAIN SECTIONS -->
+      <section class="section animate-block delay-2">
+        <h2 class="section-title">What can you find on this website?</h2>
+        <p class="section-subtitle">
+          The website is split into several pages, each with a clear purpose,
+          so you can quickly jump to the information or service you’re interested in.
+        </p>
+
+        <div class="sections-grid">
+          <article class="section-card">
+            <h3>About me · CV</h3>
+            <p>
+              A page that summarizes my journey from Al-Hasakah to Berlin:
+              work, studies, language, volunteering experiences and accounting/software courses.
+              If you want to know my professional and personal background, start here.
+            </p>
+            <a href="about.html">Open the About / CV page</a>
+          </article>
+
+          <article class="section-card">
+            <h3>YouTube channel · Tech reviews</h3>
+            <p>
+              Videos where I share my experience with tech products before you buy:
+              unboxing, setup, real-life usage and then a clear opinion about whether
+              the time and money are worth it.
+            </p>
+            <a href="youtube.html">Visit the YouTube page</a>
+          </article>
+
+          <article class="section-card">
+            <h3>Legal IPTV with real support</h3>
+            <p>
+              Yearly legal subscriptions, with help setting things up and ongoing support,
+              so you can watch your favourite content easily and in an organized way.
+              Full details and offers are on the IPTV page.
+            </p>
+            <a href="iptv.html">Open the IPTV page</a>
+          </article>
+
+          <article class="section-card">
+            <h3>Ads · Products · Small blog</h3>
+            <p>
+              Here I share links and products that I personally use or find useful,
+              plus short posts about work, organization, and daily-life experiences in Germany.
+            </p>
+            <a href="blog.html">Go to Ads & Blog</a>
+          </article>
+
+          <article class="section-card">
+            <h3>Direct contact</h3>
+            <p>
+              If you want to ask about a product, a collaboration, IPTV service
+              or general advice about life and work, you can contact me through
+              the contact page, WhatsApp or Telegram.
+            </p>
+            <a href="contact.html">Open the Contact page</a>
+          </article>
+
+          <article class="section-card">
+            <h3>Visitors’ feedback · Your ideas</h3>
+            <p>
+              A page dedicated to your comments, suggestions and ideas
+              to improve the website and the channel. Your feedback matters,
+              because every change I make is based on real experiences like yours.
+            </p>
+            <a href="feedback.html">Share your feedback and ideas</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- SERVICES STRIP -->
+      <section class="section animate-block delay-3">
+        <div class="services-strip">
+          <div class="services-item">
+            <span>✅</span>
+            <span>Honest content with no marketing sugar-coating for brands or products</span>
+          </div>
+          <div class="services-item">
+            <span>💬</span>
+            <span>Ask questions about products or life and work in Europe</span>
+          </div>
+          <div class="services-item">
+            <span>📺</span>
+            <span>IPTV subscriptions with support via WhatsApp and Telegram</span>
+          </div>
+          <div class="services-item">
+            <span>📄</span>
+            <span>Detailed CV and real-life journey from Syria to Germany</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- YOUTUBE + IPTV/BLOG BLOCKS -->
+      <section class="section home-rows">
+
+        <!-- YouTube block -->
+        <article class="home-block animate-card delay-1">
+          <h2>YouTube channel · Before you buy</h2>
+          <p>
+            If you’re thinking about buying a new tech product, the idea of the channel is simple:
+            we unbox it together, test it in real situations, and then I share what I liked,
+            what annoyed me, and whether it really fits your needs – not just what the ads say.
+          </p>
+
+          <div class="home-block-links">
+            <a class="home-link" href="youtube.html">Open the YouTube page on the site</a>
+            <span>·</span>
+            <a class="home-link" href="https://youtube.com/" target="_blank">Go to the YouTube channel</a>
+          </div>
+
+          <div class="tag-row">
+            <span class="tag-pill">Real-world reviews</span>
+            <span class="tag-pill">Unboxing & honest testing</span>
+            <span class="tag-pill">Tips before you buy</span>
+          </div>
+        </article>
+
+        <!-- IPTV + Blog block -->
+        <article class="home-block animate-card delay-2">
+          <h2>IPTV · Ads · Simple blog</h2>
+          <p>
+            Besides the content, I provide legal IPTV subscriptions with yearly offers,
+            share links to products and services that I think are useful, and write short blog posts
+            about work, planning and some of my daily experiences in Germany.
+          </p>
+
+          <div class="home-block-links">
+            <a class="home-link" href="iptv.html">Details about the IPTV offer</a>
+            <span>·</span>
+            <a class="home-link" href="blog.html">Visit Ads & Blog</a>
+          </div>
+
+          <div class="tag-row">
+            <span class="tag-pill">Legal IPTV</span>
+            <span class="tag-pill">Tested products</span>
+            <span class="tag-pill">Experiences from Berlin</span>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="home-cta animate-block delay-4">
+        <p>
+          You can start with the
+          <a href="youtube.html">YouTube page</a>,
+          or get to know me better on the
+          <a href="about.html">About / CV page</a>,
+          and whenever you want to send a message or question,
+          the <a href="contact.html">Contact page</a> is always open.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> moalfarras.space – All rights reserved.
+    </footer>
+
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

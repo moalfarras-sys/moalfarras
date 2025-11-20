@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me · CV – Mohammad Alfarras</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <meta name="description" content="About me – Mohammad Alfarras. A journey from Hasakah in Syria to Berlin in Germany. Rich CV, work experience, education, skills, languages, and a reverse timeline starting from the current job." />
+  <meta name="keywords" content="Mohammad Alfarras, CV, resume, work in Germany, Berlin, logistics, customer service, Arabic, German" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Page-specific styling for About EN -->
+  <style>
+    .about-top-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.2rem;
+      margin-top: 1.4rem;
+    }
+    @media (max-width: 840px) {
+      .about-top-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .profile-card {
+      text-align: center;
+    }
+    .profile-avatar-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: .6rem;
+    }
+    .profile-avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 32px;
+      padding: 3px;
+      background: radial-gradient(circle at 0% 0%, var(--accent-soft), #0f172a);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.5);
+    }
+    .profile-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 28px;
+      object-fit: cover;
+    }
+    .profile-name {
+      font-size: 1.1rem;
+      margin-bottom: .2rem;
+    }
+    .profile-role {
+      font-size: .85rem;
+      opacity: .85;
+      margin-bottom: .4rem;
+    }
+    .profile-meta {
+      font-size: .83rem;
+      line-height: 1.8;
+      opacity: .9;
+    }
+
+    /* Collapsible sections */
+    .collapse-block {
+      margin-top: 1.2rem;
+    }
+    .collapse-block summary {
+      list-style: none;
+      cursor: pointer;
+      font-size: .95rem;
+      font-weight: 600;
+      padding: .55rem .75rem;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.85);
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+    }
+    body.dark-mode .collapse-block summary {
+      background: rgba(15, 23, 42, 0.98);
+    }
+    .collapse-block summary::marker {
+      display: none;
+    }
+    .collapse-block summary span.label {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+    }
+    .collapse-block summary span.chevron {
+      font-size: .9rem;
+      opacity: .9;
+      transition: transform .18s ease;
+    }
+    .collapse-block[open] summary span.chevron {
+      transform: rotate(90deg);
+    }
+    .collapse-inner {
+      margin-top: .7rem;
+    }
+
+    /* Skills bars */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
+      gap: 1.2rem;
+      margin-top: 1.2rem;
+    }
+    @media (max-width: 840px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .skill-group {
+      margin-bottom: .7rem;
+    }
+    .skill-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .83rem;
+      margin-bottom: .25rem;
+    }
+    .skill-bar {
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.28);
+      overflow: hidden;
+    }
+    body.dark-mode .skill-bar {
+      background: rgba(30, 64, 175, 0.65);
+    }
+    .skill-level {
+      height: 100%;
+      width: var(--level, 60%);
+      background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+      border-radius: 999px;
+    }
+
+  </style>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+<div class="glass-shell">
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="brand">
+        <img src="../img/logo.jpg" alt="">
+        <div class="brand-text">
+          <strong>Mohammad Alfarras</strong>
+          <span>CV · About Me</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="blog.html">Ads & Products</a>
+        <a href="iptv.html">IPTV</a>
+        <a href="youtube.html">YouTube</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+
+      <div>
+        <a class="lang-switch" href="../about.html">AR</a>
+        <button id="themeToggle" class="theme-toggle">☀ / 🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="container">
+
+    <!-- Title -->
+    <section class="section">
+      <h1 class="section-title">About Me – Mohammad Alfarras</h1>
+      <p class="section-subtitle">
+        A personal page and CV that connects life and work: from Hasakah in Syria to Berlin in Germany,
+        through language courses, integration, training, and different jobs until reaching a stable path.
+      </p>
+    </section>
+
+    <!-- Top: text + profile card -->
+    <section class="about-top-grid">
+      <!-- Extended bio -->
+      <article class="glass-card">
+        <h2 style="margin-top:0;">Short Story</h2>
+        <p style="line-height:2;">
+          My name is Mohammad Alfarras, born on 05.09.1994 in Hasakah, Syria. I grew up in a simple
+          environment with school, university and early family responsibilities, before my life took
+          a completely new direction when I moved to Germany in 2015.
+        </p>
+        <p style="line-height:2;">
+          After arriving in Germany I went through a long phase of waiting, paperwork and adaptation,
+          then started language courses from A1 up to C1, moving between different schools, integration
+          courses and real-life experiences in a new country and culture.
+        </p>
+        <p style="line-height:2;">
+          Later I decided to focus on two main pillars: building a stable career in logistics and customer
+          service, and developing my skills in accounting and business software such as Lexware, DATEV and
+          Microsoft Dynamics NAV – in addition to solid Office skills (Excel, Word, PowerPoint).
+        </p>
+        <p style="line-height:2;">
+          I worked in several jobs in Germany, from manual production and warehouse-related work,
+          to an internship at Siemens, to different roles in small and medium companies, until I reached
+          my current position at Rhenus Home Delivery in Berlin as a dispatching and logistics employee.
+        </p>
+        <p style="line-height:2;">
+          I like to share a realistic picture of life and work in Europe, so I started a YouTube channel
+          and online presence where I talk about my journey, mistakes, and lessons learned – without
+          exaggeration or fake success stories.
+        </p>
+      </article>
+
+      <!-- Profile card with photo -->
+      <aside class="glass-card profile-card">
+        <div class="profile-avatar-wrap">
+          <div class="profile-avatar">
+            <img src="../img/profile.jpg" alt="Photo of Mohammad Alfarras">
+          </div>
+        </div>
+        <div class="profile-name">Mohammad Alfarras</div>
+        <div class="profile-role">Dispatch & Logistics – Berlin, Germany</div>
+
+        <div class="profile-meta">
+          <div>📍 Location: Berlin, Germany</div>
+          <div>🎂 Date of birth: 05.09.1994</div>
+          <div>📧 E-mail: <a href="mailto:Mohammad.Alfarras@gmail.com">Mohammad.Alfarras@gmail.com</a></div>
+          <div>🌐 Website: moalfarras.space</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Timeline (reversed, collapsible) -->
+    <section class="section">
+      <h2 class="section-title">Timeline – from latest to earliest</h2>
+
+      <!-- Work Experience -->
+      <details class="collapse-block" open>
+        <summary>
+          <span class="label">Work experience</span>
+          <span class="chevron">▶</span>
+        </summary>
+        <div class="collapse-inner">
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2023 – Present</div>
+              <div class="timeline-title">Rhenus Home Delivery GmbH – Berlin</div>
+              <div class="timeline-text">
+                Dispatch employee (Dispositionsmitarbeiter): planning driver routes, monitoring deliveries,
+                working with TMS, and handling customer support.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2019 – 2022</div>
+              <div class="timeline-title">Stocubo GmbH</div>
+              <div class="timeline-text">
+                Production worker – assembling modular shelf systems, supporting order execution and quality.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2019</div>
+              <div class="timeline-title">ABZiel – Berlin</div>
+              <div class="timeline-text">
+                Individual career coaching (Berufliches Einzelcoaching) to define professional goals and
+                suitable paths in the German job market.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2018</div>
+              <div class="timeline-title">Siemens AG</div>
+              <div class="timeline-text">
+                Internship as machine operator (Maschinenführer): operating CNC machines, measuring parts,
+                and documenting the results.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2014 – 2015</div>
+              <div class="timeline-title">Internet Café Malak Net – Hasakah, Syria</div>
+              <div class="timeline-text">
+                Managing an internet café, setting up local networks and routers, customer service
+                and handling daily basic accounting.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2014 – 2015</div>
+              <div class="timeline-title">Syrian Society for Social Development</div>
+              <div class="timeline-text">
+                Volunteer work in a UN-related project: supporting children in camps, teaching and
+                organizing activities.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </details>
+
+      <!-- Education -->
+      <details class="collapse-block">
+        <summary>
+          <span class="label">Education & professional courses</span>
+          <span class="chevron">▶</span>
+        </summary>
+        <div class="collapse-inner">
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2023</div>
+              <div class="timeline-title">Sandbox Berlin GmbH</div>
+              <div class="timeline-text">
+                Practical training in a practice company: order processing (Auftragsbearbeitung),
+                Lexware Pro, Microsoft Dynamics NAV.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2023</div>
+              <div class="timeline-title">Comhard GmbH</div>
+              <div class="timeline-text">
+                Financial accounting (Finanzbuchführung 1–3), basics and year-end closing,
+                working with DATEV.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2023</div>
+              <div class="timeline-title">German B2 – Comhard</div>
+              <div class="timeline-text">
+                Completed B2 German course – important step to work and study in Germany.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2018 – 2019</div>
+              <div class="timeline-title">Hartnackschule Berlin</div>
+              <div class="timeline-text">
+                German C1 course – completed the course, exam was challenging, but it improved my
+                language level significantly.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2017 – 2018</div>
+              <div class="timeline-title">VHS Spandau – German B2</div>
+              <div class="timeline-text">
+                B2 German course – successfully completed and certified.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2016 – 2017</div>
+              <div class="timeline-title">Integration courses – Berlin</div>
+              <div class="timeline-text">
+                Integration and language courses up to B1 level.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2013 – 2015</div>
+              <div class="timeline-title">Al-Furat University – Hasakah, Syria</div>
+              <div class="timeline-text">
+                Agricultural engineering studies – 6 semesters, not completed due to the situation.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2010 – 2013</div>
+              <div class="timeline-title">Abi Tammam High School</div>
+              <div class="timeline-text">
+                Scientific secondary school graduation (maths & science focus).
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2000 – 2010</div>
+              <div class="timeline-title">Basic school – Hasakah</div>
+              <div class="timeline-text">
+                Primary and middle school from first to ninth grade.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- Skills & languages with bars -->
+    <section class="section">
+      <h2 class="section-title">Skills & Languages</h2>
+
+      <div class="glass-card skills-grid">
+        <!-- Languages -->
+        <div>
+          <h3 style="margin-top:0;margin-bottom:.6rem;font-size:1rem;">Languages</h3>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>Arabic</span>
+              <span>Native</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:100%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>German</span>
+              <span>B2 / C1</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:85%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>English</span>
+              <span>Basic knowledge</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:55%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>French</span>
+              <span>Basic knowledge</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:40%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Software / Tools -->
+        <div>
+          <h3 style="margin-top:0;margin-bottom:.6rem;font-size:1rem;">Software & tools</h3>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>Microsoft Excel</span>
+              <span>Very good</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:80%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>Microsoft Word · PowerPoint</span>
+              <span>Very good</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:85%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>Lexware Pro</span>
+              <span>Practical use</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:70%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>DATEV</span>
+              <span>Basics + practice</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:65%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>Microsoft Dynamics NAV</span>
+              <span>Used in training</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:60%;"></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-header">
+              <span>Adobe Photoshop / Presentation design</span>
+              <span>Practical use</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-level" style="--level:55%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> moalfarras.space – All rights reserved.
+  </footer>
+
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

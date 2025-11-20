@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>آراء الزوار – محمد الفراس</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <meta name="description" content="آراء الزوار والمتابعين عن موقع محمد الفراس، تجربتهم مع المحتوى، خدمة IPTV، ونصائحهم لتطوير الموقع والمشاريع القادمة." />
+  <meta name="keywords" content="آراء الزوار, feedback, محمد الفراس, moalfarras, تجربة, تقييم, اقتراحات" />
+
+  <link rel="canonical" href="https://moalfarras.space/feedback.html" />
+  <link rel="alternate" hreflang="ar" href="https://moalfarras.space/feedback.html" />
+  <link rel="alternate" hreflang="en" href="https://moalfarras.space/en/feedback.html" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    form.feedback-form {
+      display: grid;
+      gap: .9rem;
+    }
+    form.feedback-form label {
+      font-size: .85rem;
+      opacity: .9;
+      display: block;
+      margin-bottom: .2rem;
+    }
+    form.feedback-form input,
+    form.feedback-form select,
+    form.feedback-form textarea {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(56,189,248,.8);
+      padding: .55rem .7rem;
+      font-family: inherit;
+      font-size: .9rem;
+      background: rgba(15,23,42,.82);
+      color: #e0f7ff;
+    }
+    form.feedback-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .feedback-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr);
+      gap: 1.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .feedback-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .testimonial-header {
+      font-size: .85rem;
+      opacity: .9;
+      margin-bottom: .8rem;
+      line-height: 1.8;
+    }
+    .testimonial-name {
+      font-weight: 600;
+      margin-bottom: .15rem;
+    }
+    .avatar-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(15,23,42,.82);
+      border: 2px solid rgba(125,211,252,.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      margin-bottom: .4rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="glass-shell">
+
+    <!-- الهيدر -->
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="brand">
+          <img src="img/logo.jpg" alt="Logo" />
+          <div class="brand-text">
+            <strong>Mohammad Alfarras</strong>
+            <span>Visitors Feedback</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+  <a href="index.html">الرئيسية</a>
+  <a href="about.html">من أنا</a>
+  <a href="blog.html">إعلانات ومنتجات</a>
+  <a href="iptv.html">IPTV</a>
+  <a href="youtube.html">يوتيوب</a>   <!-- تمت إضافتها -->
+  <a href="contact.html">تواصل</a>
+  <a href="feedback.html">آراء الزوار</a>
+</nav>
+
+        <div>
+          <a class="lang-switch" href="en/feedback.html">EN</a>
+          <button id="themeToggle" class="theme-toggle">☀ / 🌙</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- المحتوى -->
+    <main class="container">
+      <section class="section">
+        <h1 class="section-title">آراؤكم تهمني</h1>
+        <p class="section-subtitle">
+          هذا القسم مخصص لكم أنتم. تستطيع كتابة رأيك في الموقع، المحتوى، خدمة IPTV،
+          أو اقتراح أفكار جديدة لمشاريع أو صفحات قادمة. كل رسالة أقرأها بنفسي وأحاول
+          أتعلم منها وأطوّر الشغل خطوة خطوة.
+        </p>
+
+        <div class="feedback-layout">
+
+          <!-- نموذج الآراء -->
+          <div class="glass-card">
+            <h2 style="font-size:1rem;margin-bottom:.6rem;">شارك رأيك أو اقتراحك</h2>
+
+            <!-- حالياً يستخدم mailto، ويمكن لاحقاً ربطه بـ Formspree أو Back-end -->
+            <form class="feedback-form" action="mailto:Mohammad.Alfarras@gmail.com" method="post" enctype="text/plain">
+              <div>
+                <label for="fb-name">الاسم (اختياري)</label>
+                <input type="text" id="fb-name" name="name" placeholder="يمكن تركه فارغاً إذا أحببت" />
+              </div>
+
+              <div>
+                <label for="fb-type">نوع الملاحظة</label>
+                <select id="fb-type" name="type">
+                  <option value="تطوير الموقع">تطوير الموقع</option>
+                  <option value="اقتراح لمحتوى أو فيديو">اقتراح لمحتوى أو فيديو</option>
+                  <option value="تجربتك مع العمل أو الهجرة">تجربتك مع العمل أو الهجرة</option>
+                  <option value="رأيك في خدمة IPTV">رأيك في خدمة IPTV</option>
+                  <option value="رسالة شخصية">رسالة شخصية</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="fb-message">رأيك / ملاحظتك</label>
+                <textarea id="fb-message" name="message" placeholder="اكتب هنا ما تحب مشاركته..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary">إرسال رأيي</button>
+            </form>
+
+            <p style="font-size:.78rem;opacity:.8;margin-top:.7rem;">
+              تنبيه: النموذج حالياً يفتح برنامج البريد على جهازك ويرسل رسالة إلى بريدي.
+              مستقبلاً يمكن ربطه بنموذج احترافي لحفظ الآراء داخل قاعدة بيانات.
+            </p>
+          </div>
+
+          <!-- آراء افتراضية / Testimonials -->
+          <div>
+            <div class="glass-card">
+              <p class="testimonial-header">
+                بعض الأمثلة على آراء يمكن أن تصلني منكم. الهدف منها توضيح نوع
+                الملاحظات التي أرحّب بها، وليس استعراضاً، لأن أجمل ما في هذا
+                المشروع أنه يكبر بوجودكم وبكلامكم الصريح.
+              </p>
+
+              <div class="testimonials">
+                <div class="testimonial-card">
+                  <div class="avatar-circle">A</div>
+                  <div class="testimonial-name">أحمد – ألمانيا</div>
+                  <p>
+                    أتابعك من فترة، يعجبني أنك تحكي تجربتك كما هي، بدون تلميح
+                    أن الحياة في أوروبا سهلة أو مثالية. الموقع شكله مرتب،
+                    وأتمنى تضيف صفحة عن الأخطاء اللي وقعت فيها أول ما وصلت.
+                  </p>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="avatar-circle">S</div>
+                  <div class="testimonial-name">سارة – هولندا</div>
+                  <p>
+                    استفدت من شرحك لمسار اللغة والدورات التي أخذتها. فكرة
+                    التايملاين ساعدتني أفهم الطريق خطوة خطوة. أتمنى فيديوهات
+                    أكثر عن تنظيم الوقت بين الشغل والدراسة.
+                  </p>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="avatar-circle">M</div>
+                  <div class="testimonial-name">محمد – بلجيكا</div>
+                  <p>
+                    حلو أنك جمعت السيرة الذاتية مع معلومات شخصية ومحتوى في مكان واحد.
+                    هذا يعطيني صورة أوضح عنك كإنسان، وليس فقط كـ CV رسمي. استمر.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> moalfarras.space – جميع الحقوق محفوظة.
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

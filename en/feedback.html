@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visitors Feedback – Mohammad Alfarras</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <meta name="description" content="Visitors feedback and suggestions for Mohammad Alfarras. Share your opinion about the website, content, IPTV service, or ideas for future projects." />
+  <meta name="keywords" content="feedback, visitors, opinion, suggestions, Mohammad Alfarras, moalfarras, IPTV, life in Europe" />
+
+  <link rel="canonical" href="https://moalfarras.space/en/feedback.html" />
+  <link rel="alternate" hreflang="en" href="https://moalfarras.space/en/feedback.html" />
+  <link rel="alternate" hreflang="ar" href="https://moalfarras.space/feedback.html" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    form.feedback-form {
+      display: grid;
+      gap: .9rem;
+    }
+    form.feedback-form label {
+      font-size: .85rem;
+      opacity: .9;
+      display: block;
+      margin-bottom: .2rem;
+    }
+    form.feedback-form input,
+    form.feedback-form select,
+    form.feedback-form textarea {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(56,189,248,.8);
+      padding: .55rem .7rem;
+      font-family: inherit;
+      font-size: .9rem;
+      background: rgba(15,23,42,.82);
+      color: #e0f7ff;
+    }
+    form.feedback-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .feedback-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr);
+      gap: 1.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .feedback-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .testimonial-header {
+      font-size: .85rem;
+      opacity: .9;
+      margin-bottom: .8rem;
+      line-height: 1.8;
+    }
+    .testimonial-name {
+      font-weight: 600;
+      margin-bottom: .15rem;
+    }
+    .avatar-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(15,23,42,.82);
+      border: 2px solid rgba(125,211,252,.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      margin-bottom: .4rem;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div class="glass-shell">
+
+    <!-- HEADER -->
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="brand">
+          <img src="../img/logo.jpg" alt="Logo" />
+          <div class="brand-text">
+            <strong>Mohammad Alfarras</strong>
+            <span>Visitors Feedback</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="blog.html">Ads & Products</a>
+  <a href="iptv.html">IPTV</a>
+  <a href="youtube.html">YouTube</a>  <!-- NEW -->
+  <a href="contact.html">Contact</a>
+  <a href="feedback.html">Feedback</a>
+</nav>
+
+        <div>
+          <a class="lang-switch" href="../feedback.html">AR</a>
+          <button id="themeToggle" class="theme-toggle">☀ / 🌙</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="container">
+      <section class="section">
+        <h1 class="section-title">Your feedback matters</h1>
+        <p class="section-subtitle">
+          This section is dedicated to you. You can share your opinion about the website, the content,
+          the IPTV service, or suggest ideas for future pages and projects.  
+          I personally read every message and try to learn from it.
+        </p>
+
+        <div class="feedback-layout">
+
+          <!-- FORM -->
+          <div class="glass-card">
+            <h2 style="font-size:1rem;margin-bottom:.6rem;">Share your feedback</h2>
+
+            <!-- mailto for now – can be upgraded later -->
+            <form class="feedback-form" action="mailto:Mohammad.Alfarras@gmail.com" method="post" enctype="text/plain">
+              <div>
+                <label for="fb-name">Name (optional)</label>
+                <input type="text" id="fb-name" name="name" placeholder="You can leave this empty if you prefer" />
+              </div>
+
+              <div>
+                <label for="fb-type">Type of feedback</label>
+                <select id="fb-type" name="type">
+                  <option value="Website improvement">Website improvement</option>
+                  <option value="Content or video suggestion">Content or video suggestion</option>
+                  <option value="Your experience with work or migration">Your experience with work or migration</option>
+                  <option value="Your opinion about the IPTV service">Your opinion about the IPTV service</option>
+                  <option value="Personal message">Personal message</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="fb-message">Your feedback / message</label>
+                <textarea id="fb-message" name="message" placeholder="Write what you would like to share..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary">Send my feedback</button>
+            </form>
+
+            <p style="font-size:.78rem;opacity:.8;margin-top:.7rem;">
+              Note: this form currently opens your mail app and sends an email directly.
+              In the future, it can be connected to a database or form service to store all feedback.
+            </p>
+          </div>
+
+          <!-- SAMPLE TESTIMONIALS -->
+          <div>
+            <div class="glass-card">
+              <p class="testimonial-header">
+                These are just example messages of the type of feedback I’d be happy to receive.  
+                Honest, simple and based on your real experience – this is what helps me improve.
+              </p>
+
+              <div class="testimonials">
+                <div class="testimonial-card">
+                  <div class="avatar-circle">A</div>
+                  <div class="testimonial-name">Ahmed – Germany</div>
+                  <p>
+                    I like that you talk about your experience as it is, without pretending that life
+                    in Europe is always easy. The site looks clean and organized. I’d love a page about
+                    the mistakes you made when you first arrived.
+                  </p>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="avatar-circle">S</div>
+                  <div class="testimonial-name">Sarah – Netherlands</div>
+                  <p>
+                    Your timeline helped me understand the path from language courses to real work.
+                    I’d like more content about time management between work, study and family.
+                  </p>
+                </div>
+
+                <div class="testimonial-card">
+                  <div class="avatar-circle">M</div>
+                  <div class="testimonial-name">Mohammed – Belgium</div>
+                  <p>
+                    I appreciate that you combined your CV with a personal story in one website.
+                    It gives a full picture of you as a person, not just as a formal CV.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> moalfarras.space – All rights reserved.
+    </footer>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
